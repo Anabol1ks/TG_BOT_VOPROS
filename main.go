@@ -54,7 +54,7 @@ func main() {
 				"Для того чтобы отправить нам ваш анонимный вопрос, введите команду /ask или нажмите на кнопку ниже 'Задать вопрос'.\n\n")
 			bot.Send(msg)
 
-			msg = tgbotapi.NewMessage(update.Message.Chat.ID, "Если вы вдруг хотите не оставаться анонимами, то можете указать своё имя в конце вопроса.")
+			msg = tgbotapi.NewMessage(update.Message.Chat.ID, "Если вы вдруг не хотите оставаться анонимами, то можете указать своё имя в конце вопроса.")
 			bot.Send(msg)
 
 		case "/ask", "Задать вопрос":
@@ -91,7 +91,7 @@ func main() {
 			}
 
 			// Подтверждаем отправку
-			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Ваш вопрос отправлен! Спасибо за участие.")
+			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Ваш вопрос отправлен! ХАЧу скоро ответят вам.\n"+"Задать новый вопрос -> /ask")
 			bot.Send(msg)
 		}
 	}
