@@ -6,15 +6,14 @@ import (
 	"time"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
-	"github.com/joho/godotenv"
 )
 
 func main() {
 	// Создаем нового бота, укажите здесь ваш токен
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Ошибка загрузки .env")
-	}
+	// err := godotenv.Load()
+	// if err != nil {
+	// 	log.Fatal("Ошибка загрузки .env")
+	// }
 
 	tgToken := os.Getenv("TELEGRAM_BOT_TOKEN")
 	bot, err := tgbotapi.NewBotAPI(tgToken)
